@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(250, 240, 242);
+        }
+        .waplogo{
+            position: absolute;
+            top: 10px;
+            left: 50px;
+        }
+        #parent{
+            height: 120px;
+            width: 900px;
+            position: relative;
+            background-color: white;
+            top: 80px;
+            left: 230px;
+            border: 1px solid black;
+            border-radius: 20px;
+        }
+        #parent>span{
+            position: absolute;
+            top: 35px;
+            left: 45px;
+        }
+        #parent>h1{
+            font-family: "Barlow Condensed", sans-serif;
+            font-weight: 100;
+            font-style: normal;
+            left: 100px;
+            position: absolute;
+            font-size: x-large;
+            padding: 10px 0px 0px 50px;
+        }
+        #parent>p{
+            position: absolute;
+            font-family: "Barlow Condensed", sans-serif;
+            font-weight: 100;
+            font-style: normal;
+            padding: 45px 250px 0px 150px;
+        }
+        
+        
+        #parent1{
+            height: 400px;
+            width: 900px;
+            position: relative;
+            top: 100px;
+            left: 230px;
+            border: 1px solid black;
+            border-radius: 20px;
+            background-color: white;
+            
+        }
+        #parent1>h1{
+            font-family: "Barlow Condensed", sans-serif;
+            font-weight: 500;
+            font-style: normal;
+            padding-left: 50px;
+            padding-top: 30px;
+        }
+        #parent1>h2{
+            font-family: "Barlow Condensed", sans-serif;
+            font-weight: 100;
+            font-style: normal;
+            font-size: 18px;
+            padding-left: 60px;
+            padding-top: 15px;
+        }
+        #parent1>h3{
+            padding-top: 10px;
+            font-family: "Barlow Condensed", sans-serif;
+            font-weight: 100;
+            font-style: normal;
+            padding-left: 50px;
+            font-size: 16px;
+        }
+        
+        #parent1>.hov:hover{
+            color: rgb(16, 218, 16);
+            cursor: pointer;
+            
+        }
+        #parent1>.down{
+            padding-top: 30px;
+            /* border: 2px solid black; */
+        }
+        .hov{
+            font-size: 15px;
+            position: absolute;
+        }
+        #parent1>h3>#a1{
+            height: 13px;
+            width: 13px;
+            font-size: small;
+            font-weight: 800;
+            background-color: black;
+            color: white;
+            border-radius: 150%;
+            border: 2px solid black;
+            
+        }
+        #arrow{
+            transform: rotate(40deg);
+        }
+        #parent1>h3>#a2{
+            font-size: 23px;
+            bottom: 42px;
+            position: absolute;
+            background-color: white;
+            color: rgb(16, 218, 16);
+        }
+       
+        #underline1{
+            position: absolute;
+            color: rgb(16, 218, 16);
+            left: 289px;
+            bottom: 116px;
+            font-size: 7px;
+            font-weight: bolder;
+        }
+        #underline2{
+            position: absolute;
+            color: rgb(16, 218, 16);
+            left: 882px;
+            bottom: 51px;
+            font-size: 7px;
+            font-weight: bolder;
+        }
+        #underline3{
+            position: absolute;
+            color: rgb(16, 218, 16);
+            left: 785px;
+            top: 698px;
+            font-weight: bold;
+            font-size: 7px;
+        }
+        button{
+            height: 50px;
+            width: 160px;
+            border-radius: 50px;
+            border: none;
+            margin-left: 680px;
+            margin-top: 35px;
+            position: relative;
+            border: 1.5px solid black;
+            background: #25D366;
+            color: black;
+        }
+        button:hover{
+            background-color: black;
+            color: white;
+            transition-duration: 3s;
+            cursor: pointer;
+        }
+        .number1{
+            height: 25px;
+            width: 25px;
+            left: 291px;
+            bottom: 262px;
+            position: absolute;
+            border: 1px solid black;
+            border-radius: 100px;
+        }
+        .number2{
+            height: 25px;
+            width: 25px;
+            left: 291px;
+            bottom: 209.9px;
+            position: absolute;
+            border: 1px solid black;
+            border-radius: 100px;
+        }
+        .number3{
+            height: 25px;
+            width: 25px;
+            left: 291px;
+            bottom: 159px;
+            position: absolute;
+            border: 1px solid black;
+            border-radius: 100px;
+        }
+            .num1{
+                position: absolute;
+                padding-left: 62.5px;
+                bottom: 225px;
+                font-size: 30px;
+            }
+            .num2{
+                position: absolute;
+                padding-left: 62.5px;
+                bottom: 174px;
+                font-size: 29px;
+            }
+            
+            .fa-brands{
+                font-size: 35px;
+                color: rgb(16, 218, 16);
+                position: absolute;
+                bottom: 195px;
+        }
+        
+        #parent2>h1{
+            position: absolute;
+            font-family: "Barlow Condensed", sans-serif;
+            font-size: 19px;
+            font-weight: 400;
+            left: 495px;
+            top: 670px;
+        }
+       
+        #parent1>.hov1:hover{
+            color: rgb(16, 218, 16);
+            cursor: pointer;
+        }
+       
+        #parent1>.down>.hov2:hover{
+            color: rgb(16, 218, 16);
+            cursor: pointer;
+        }
+        #parent2>.hov3{
+            position: absolute;
+            font-family: "Barlow Condensed", Arial, Helvetica, sans-serif;
+            font-size: 17px;
+            font-weight: 100;
+            left: 784px;
+            top: 668px;
+        }
+        #parent2>.hov3:hover{
+            color: rgb(16, 218, 16);
+            cursor: pointer;
+        }
+        #parent2>h2{
+            position: absolute;
+            left: 492px;
+            top: 720px;
+            font-family: "Barlow Condensed", Arial, Helvetica, sans-serif;
+            font-size: large;
+            font-weight: lighter;
+            color: rgb(90, 89, 87);
+        }
+        #parent2>p{
+            position: absolute;
+            left: 600px;
+            top: 770px;
+            font-size: 13px;
+            color: rgb(90, 89, 87);
+            font-family: "Barlow Condensed", Arial, Helvetica, sans-serif;
+        }
+        #parent2>p:hover{
+            text-decoration: underline;
+            color: rgb(90, 89, 87);
+        }
+        #parent2>img{
+            height: 250px;
+            width: 200px;
+            position: absolute;
+            left: 880px;
+            bottom: 100px;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <img class="waplogo" alt="WhatsApp Main Page" src="https://static.whatsapp.net/rsrc.php/yZ/r/JvsnINJ2CZv.svg">
+    <div id="parent">
+        <span aria-hidden="true" data-icon="web-login-desktop-upsell-illustration" class=""><svg viewBox="0 0 72 54" width="64" preserveAspectRatio="xMidYMid meet" class="" fill="none"><title>web-login-desktop-upsell-illustration</title><g clip-path="url(#clip0_913_5240)"><path fill="#fff" d="M0 0h72v54H0z" style="fill: rgb(255, 255, 255);"></path><path d="M8.75 15A6.25 6.25 0 0 1 15 8.75h42A6.25 6.25 0 0 1 63.25 15v37.25H8.75z" fill="#E6FFDA" stroke="#111B21" stroke-width="1.5" stroke-miterlimit="10"></path><path d="M71.22 44.75a9.25 9.25 0 0 1-9.22 8.5H10a9.25 9.25 0 0 1-9.22-8.5z" fill="#E6FFDA" stroke="#111B21" stroke-width="1.5" stroke-miterlimit="10"></path><rect x="21.75" y="0.75" width="49.5" height="34.5" rx="6.25" fill="#FCF5EB" stroke="#111B21" stroke-width="1.5" stroke-miterlimit="10"></rect><path d="M43.39 14.955c-.654-1.334 2.328-2.92 2.505-3.648l-.007-.01c.041-.16 0-.318-.047-.476a10.55 10.55 0 0 0-2.25-4.09c-.26-.286-.549-.572-.92-.683-.245-.069-.507-.055-.755-.014-2.124.335-3.598 2.363-3.86 4.438-.263 2.076.445 4.166 1.3 6.11 1.838 4.176 4.592 8.235 8.728 10.376 1.474.766 3.176 1.266 4.786.942 1.083-.218 2.183-1.007 2.128-2.08-.03-.51-.31-.976-.582-1.42-.616-.986-1.226-1.973-1.842-2.955-.31-.497-.68-1.038-1.266-1.156-1.215-.241-2.036 1.545-3.265 1.383-.483-.065-4.256-5.806-4.653-6.717" fill="#25D366" stroke="#111B21" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></g><defs><clipPath id="clip0_913_5240"><path fill="#fff" d="M0 0h72v54H0z" style="fill: rgb(255, 255, 255);"></path></clipPath></defs></svg></span>
+
+        <h1>Download WhatsApp for Windows</h1>
+        <p>Make calls, share your screen and get a faster exprience when you download the Windows app.</p>
+        <button>Download&emsp;<i class="fa-solid fa-arrow-down"></i></button>
+
+    </div>
+
+    <div id="parent1">
+        <h1>Steps to log in</h1>
+        <h2>1&emsp;&emsp14;Scan the QR code with your phone's camera</h2>
+        <div class="num1">|</div>
+        <h2>2&emsp;&emsp14;Tap the link to open Whatsapp<i class="fa-brands fa-square-whatsapp"></i></h2>
+        <div class="num2">|</div>
+        <h2>3&emsp;&emsp14;Scan the QR code again to link to your account</h2>
+        <h3 class="hov1">Need help?<i id="arrow" class="fa-solid fa-arrow-up"></i></h3>
+        
+        <h3 class="down">   <i id="a2" class="fa-solid fa-square-check"></i>&emsp;&emsp;&emsp;Stay logged in on this browser  <i id="a1" class="fa-solid fa-circle-exclamation"></i>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+        <span class="hov2">Log in with Phone number<i class="fa-solid fa-angle-right"></i></span></h3>
+    </div>
+
+    <div id="parent2">
+    <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://web.whatsapp.com/" alt="">
+        <h1>Don't have a WhatsApp account?</h1>
+        <h3 class="hov3">Get started       <i id="arrow" class="fa-solid fa-arrow-up"></i></h3>
+        <h2><i class="fa-solid fa-lock"></i>&emsp13;Your personal message are end-to-end encrpted</h2>
+        <p>Term & Privacy Policy</p>
+    </div>
+
+    <div id="underline1">_______________________</div>
+    <div id="underline2">_____________________________________________________</div>
+    <div id="underline3">________________________</div>
+        <div class="number1"></div>
+        <div class="number2"></div>
+        <div class="number3"></div>
+</body>
+</html>

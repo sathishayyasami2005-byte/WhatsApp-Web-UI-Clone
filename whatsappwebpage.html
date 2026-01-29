@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        
+        #parent>#navname{
+            display: flex;
+            position: fixed;
+            background-color: rgba(252, 235, 235, 0.562);
+            padding: 15px 60px;
+            height: 80px;
+            width: 1350px;
+            align-items: center;
+            justify-content: end;
+            box-shadow: 0 2px 6px rgba(0, 0, 0,0.1);
+            z-index: 30;
+            backdrop-filter: blur(5px);
+        }
+
+
+        #parent>.backgrdimg{
+            position: absolute;
+            top: 100px;
+            height: 45em;
+            width: 84.4em;
+            /* filter: blur(1px); */
+            z-index: 5;
+            
+        }
+
+        .waplogo{
+            position: relative;
+            right: 780px;
+            font-weight: bolder;
+        }
+        
+        .login{
+            height: 50px;
+            width: 140px;
+            border-radius: 50px;
+            border: none;
+            margin-left: 10px;
+            padding: 8px 16px;
+            border: 1.5px solid black;
+            background: white;
+            color: black;
+            cursor: pointer;
+        }
+        .download{
+            height: 50px;
+            width: 160px;
+            padding: 8px 16px;
+            margin-left: 10px;
+            border: none;
+            border-radius: 50px;
+            background: #25D366;
+            border: 1.5px solid black;
+            color: black;
+            cursor: pointer;
+        }
+        .login:hover{
+            background-color: black;
+            color: white;
+            position: relative;
+            transition-duration: 3s;
+        }
+        .download:hover{
+            background-color: black;
+            color: white;
+            position: relative;
+            transition-duration: 3s;
+        }
+        
+
+        #parent>#navname>.navi{
+            display: inline;
+            position: absolute;
+            left: 300px;
+            font-size: larger;
+        }
+        a{
+            color: black;
+            text-decoration: none;
+        }
+        a:hover{
+            text-decoration: underline;
+            color: #25D366;
+        }
+
+        #pagedn{
+            height: 550px;
+            width: 1350px;
+            position: relative;
+            background-color: rgb(8, 5, 10);
+            border: 2px black solid;
+            top: 750px;
+            z-index: 1;
+
+        }
+
+        #pagedn>.pnt{
+            width: 700px;
+            color: rgb(136, 133, 133);
+            position: absolute;
+            left: 430px;
+            bottom: 385px;
+        }
+        #pagedn>.pnt1{
+            list-style: none;
+            width: 150px;
+            color: white;
+            position: relative;
+            left: 430px;
+            top: 200px;
+            font-size: 17px;
+            font-family: sans-serif;
+        }
+        #pagedn>.pnt2{
+            list-style: none;
+            width: 150px;
+            color: white;
+            position: relative;
+            left: 630px;
+            top: 60px;
+            font-family: sans-serif;
+            font-size: 17px;
+        }
+        #pagedn>.pnt3{
+            list-style: none;
+            width: 150px;
+            color: white;
+            position: relative;
+            left: 830px;
+            bottom: 100px;
+            font-size: 17px;
+            font-family: sans-serif;
+        }
+        #pagedn>.pnt4{
+            list-style: none;
+            width: 200px;
+            color: white;
+            position: relative;
+            left: 1030px;
+            bottom: 240px;
+            font-size: 17px;
+            font-family: sans-serif;
+        }
+        #pagedn>ol>li:hover{
+            text-decoration: underline;
+        }
+        #pagedn>ul>li:hover{
+            text-decoration: underline;
+        }
+        #parent>#pagedn>button{
+            height: 50px;
+            display: inline;
+            position: absolute;
+            border-radius: 50px;
+            border: none;
+            cursor: pointer;
+            bottom: 230px;
+            left: 150px;
+            border: 1.5px solid black;
+        }
+        #parent>#pagedn>.waplogo{
+            position: absolute;
+            bottom: 380px;
+            left: 150px;
+        }
+        h1{
+            position: absolute;
+            bottom: 130px;
+            left: 150px;
+            color: rgb(136, 133, 133);
+        }
+        h5{
+            position: absolute;
+            bottom: 50px;
+            left: 150px;
+            color: rgb(136, 133, 133);
+        }
+        #pagedn>.last2{
+            left: 320px;
+            color: rgb(136, 133, 133);
+        }
+        #pagedn>.last3{
+            position: absolute;
+            bottom: 65px;
+            left: 470px;
+            color: rgb(136, 133, 133);
+        }
+        #pagedn>select{
+            height: 50px;
+            width: 180px;
+            padding-left: 10px;
+            font-size: 15px;
+            font-weight: bolder;
+            position: absolute;
+            bottom: 45px;
+            left: 1000px;
+            color: black;
+            background-color: white;
+            border: 15px solid rgb(255, 255, 255);
+            border-radius: 50px;
+        }
+      
+        #pagedn>#icon1{
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            padding: 16px;
+            color: white;
+            background-color: rgb(31, 31, 31);
+            bottom: 45px;
+            left: 570px;
+            position: absolute;
+            border: 1px white solid;
+        }  
+        #pagedn>#icon1:hover{
+           background-color: black;
+        } 
+        #pagedn>#icon2{
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            padding: 16px;
+            color: white;
+            background-color: rgb(31, 31, 31);
+            bottom: 45px;
+            left: 640px;
+            position: absolute;
+            border: 1px white solid;
+        }  
+        #pagedn>#icon2:hover{
+           background-color: red;
+        } 
+        #pagedn>#icon3{
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            padding: 16px;
+            color: white;
+            background-color: rgb(31, 31, 31);
+            bottom: 45px;
+            left: 710px;
+            position: absolute;
+            border: 1px white solid;
+        }  
+        #pagedn>#icon3:hover{
+           background-color: rgba(255, 0, 140, 0.856);
+        } 
+        #pagedn>#icon4{
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            padding: 16px;
+            color: white;
+            background-color: rgb(31, 31, 31);
+            bottom: 45px;
+            left: 780px;
+            position: absolute;
+            border: 1px white solid;
+        }  
+        #pagedn>#icon4:hover{
+           background-color: blue;
+        } 
+    
+        .download2{
+            position: absolute;
+            height: 50px;
+            width: 160px;
+            border-radius: 50px;
+            top: 600px;
+            left: 100px;
+            background: #25D366;
+            border: 1.5px solid black;
+            color: black;
+            z-index: 10;
+        }
+        .download2:hover{
+            background-color: black;
+            color: white;
+            transition-duration: 3s;
+        }
+        .login2{
+            position: absolute;
+            height: 50px;
+            width: 140px;
+            border-radius: 50px;
+            top: 600px;
+            left: 285px;
+            background: #ffffff;
+            border: 1.5px solid black;
+            color: black;
+            z-index: 10;
+        }
+        .login2:hover{
+            background-color: black;
+            color: white;
+            transition-duration: 3s;
+        }
+        #bigpara{
+            height: 170px;
+            width: 350px;
+            top: 150px;
+            left: 150px;
+            position: absolute;
+            font-size: 60px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: 400;
+            color: white;
+            /* border: 2px solid yellow; */
+            z-index: 10;
+        }
+        #smallpara{
+            height: 100px;
+            width: 330px;
+            font-size: 20px;
+            color: white;
+            top: 470px;
+            left: 100px;
+            position: absolute;
+            /* border: 2px solid yellow; */
+            z-index: 10;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!--  -->
+    <div id="parent">
+        <img class="backgrdimg" src="../Html forlder/css/3ad53e83356915.5d8238625854d.png" alt="backgrdimg">
+        
+        <h1 id="bigpara">Message privately</h1>
+        <!-- <p id="smallpara">Simple, reliable, private messaging and calling for free*, available all over the world.</p> -->
+        <button class="download2">Download&emsp;<span><i class="fa-solid fa-arrow-down"></i></span></button>
+        <a href="../projects/wapplog.html">
+        <button class="login2">Log  in&emsp;<span><i class="fa-solid fa-angle-right"></i></span></button>
+        </a>
+        
+        <div id="navname">
+            <img class="waplogo" alt="WhatsApp Main Page" src="https://static.whatsapp.net/rsrc.php/yZ/r/JvsnINJ2CZv.svg">
+            <ul class="navi">
+            <a href="" >Features</a>&emsp;&emsp;
+            <a href="" >Privacy</a>&emsp;&emsp;
+            <a href="" >Help Center</a>&emsp;&emsp;
+            <a href="" >Blog</a>&emsp;&emsp;
+            <a href="" >For Business</a>&emsp;&emsp;
+            <a href="" >Apps</a>
+            </ul>
+
+        <a href="../projects/wapplog.html">  
+        <button class="login">Log  in&emsp;<span><i class="fa-solid fa-angle-right"></i></span></button>
+        </a>&emsp;
+        <button class="download">Download&emsp;<span><i class="fa-solid fa-arrow-down"></i></span></button>
+        </div>
+        <div id="pagedn">
+            <h5 class="pnt">What we do &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                            What we are &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 
+                            Using WhatsApp &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 
+                            Need help?</h5>
+                 <ol class="pnt1">
+                        <li>Features</li>&emsp;
+                        <li>Blog</li>&emsp;
+                        <li>Security</li>&emsp;
+                        <li>For Business</li>
+                    </ol>
+                <ul class="pnt2">
+                        <li>About us</li>&emsp;
+                        <li>Careers</li>&emsp;
+                        <li>Brand Center</li>&emsp;
+                        <li>Privacy</li>&emsp;
+                    </ul>
+                <ol class="pnt3">
+                        <li>Android</li>&emsp;
+                        <li>Iphone</li>&emsp;
+                        <li>Mac/PC</li>&emsp;
+                        <li>WhatsApp Web</li>
+                    </ol>
+                <ul class="pnt4">
+                        <li>Contact us</li>&emsp;
+                        <li>Help Center</li>&emsp;
+                        <li>Apps</li>&emsp;
+                        <li>Security Advisories</li>
+                    </ul>
+            
+            <button class="download">Download&emsp;<span><i class="fa-solid fa-arrow-down"></i></span></button>
+            <img class="waplogo" alt="WhatsApp Main Page" src="https://static.whatsapp.net/rsrc.php/yZ/r/JvsnINJ2CZv.svg">
+
+            <h1>________________________________________________________________</h1>
+            <h5 class="last1">2026 @ WhatsApp <br> LCC</h5>
+            <h5 class="last2">Term & Privacy <br> Policy</h5>
+            <h5 class="last3">Sitemap</h5>
+    
+            <i id="icon1" class="fa-brands fa-x-twitter"></i>
+            <i id="icon2" class="fa-brands fa-youtube"></i>   
+            <i id="icon3" class="fa-brands fa-instagram"></i>
+            <i id="icon4" class="fa-brands fa-facebook-f"></i>    
+            <select name="English" class="lan-select">
+             <option value="">English</option>   
+             <option value="">Tamil</option>   
+             <option value="">Hindi</option>
+             <option value="">Telugu</option>   
+             <option value="">Malayalam</option>   
+             <option value="">Punjabi</option>   
+             <option value="">Kannada</option>   
+             <option value="">Bengali</option>   
+             <option value="">Marati</option>   
+            </select>
+        </div>
+    </div>
+</body>
+</html>
